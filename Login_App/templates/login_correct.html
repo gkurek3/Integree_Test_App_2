@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="login-page">
+    <div class="form">
+    <form class="login-form">
+    <h3>Logowanie pomyślne</h3><br>
+    <h1>Cześć {{ username }}!</h1>
+    {% if user.is_authenticated %}
+        <a href="{% url 'logout' %}">Wyloguj</a>
+    {% endif %}
+    </form>
+    </div>
+    </div>
+
+{% endblock %}
